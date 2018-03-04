@@ -58,10 +58,10 @@ try
     
     hT = Screen('MakeTexture',mainwin,heart); % Load image to vRam
     %% Instructions
-    HBTmsg.one = ['Im Folgenden werden wir eine Ruhemessung durchführen.\n'...,
+    HBTmsg.one = ['Im Folgenden werden wir eine Ruhemessung durchfÃ¼hren.\n'...,
         'Bitte schauen Sie auf das Fixationskreuz und bleiben Sie ruhig sitzen.'];
-    HBTmsg.two = ['Im Folgenden konzentrieren Sie sich bitte auf die Brust-Region und zählen leise im Kopf jeden Herzschlag, den Sie fühlen. \n'...,
-        'Sobald Sie "Start" hören fangen Sie an zu zählen, bis Sie "Stop" hören. Anschliessend tragen Sie die Zahl über die Tastatur ein. \n'...,
+    HBTmsg.two = ['Im Folgenden konzentrieren Sie sich bitte auf die Brust-Region und zÃ¤hlen leise im Kopf jeden Herzschlag, den Sie fÃ¼hlen. \n'...,
+        'Sobald Sie "Start" hÃ¶ren fangen Sie an zu zÃ¤hlen, bis Sie "Stop" hÃ¶ren. Anschliessend tragen Sie die Zahl Ã¼ber die Tastatur ein. \n'...,
         'Bitte verwenden Sie keine Hilfsmittel, wie das manuelle Erfassen des Pulses.'];
     HBTmsg.end = ['Ende.'];
     HBTmsg.fixation = ['+'];
