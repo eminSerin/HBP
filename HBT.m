@@ -45,7 +45,6 @@ try
     
      % Color codes used for the task.
     color.bg = [0 0 0]; % black background
-    color.pink = [255,105,180]; %pink
     color.text = [255 255 255]; % white
     
     % Open drawing window in your display with maximum number. That means
