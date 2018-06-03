@@ -2,6 +2,7 @@ try
 
     subID = input('Participant number: ','s'); % ask participant id. 
     hbtsession = 1;
+    lang = 'eng'; % 'eng' or 'deu'
     
     %% Setup Triggers
     
@@ -57,14 +58,39 @@ try
     
     hT = Screen('MakeTexture',mainwin,heart); % Load image to vRam
     %% Instructions
-    HBTmsg.one = ['Im Folgenden werden wir eine Ruhemessung durchführen.\n'...,
+    
+    % German
+    deu.one = ['Im Folgenden werden wir eine Ruhemessung durchführen.\n'...,
         'Bitte schauen Sie auf das Fixationskreuz und bleiben Sie ruhig sitzen.'];
-    HBTmsg.two = ['Im Folgenden konzentrieren Sie sich bitte auf die Brust-Region und zählen leise im Kopf jeden Herzschlag, den Sie fühlen. \n'...,
+    deu.two = ['Im Folgenden konzentrieren Sie sich bitte auf die Brust-Region und zählen leise im Kopf jeden Herzschlag, den Sie fühlen. \n'...,
         'Sobald Sie "Start" hören fangen Sie an zu zählen, bis Sie "Stop" hören. Anschliessend tragen Sie die Zahl über die Tastatur ein. \n'...,
         'Bitte verwenden Sie keine Hilfsmittel, wie das manuelle Erfassen des Pulses.'];
-    HBTmsg.end = ['Ende.'];
-    HBTmsg.fixation = ['+'];
-    HBTmsg.start = ['Start...'];
+    deu.end = ['Ende.'];
+    deu.fixation = ['+'];
+    deu.start = ['Start...'];
+    
+    % English
+    eng.one = ['In the following, there is a baseline measurement. \n',...
+        'Please fixate at the cross on the screen and stay calm.',...
+        'Please press any key to procede....'];
+    eng.two = ['Please focus on your breast area and quietly count ',...
+        'your heartbeat that you feel. \n',...
+        'As soon as you hear "Zählen" start counting your pulse until you ',...
+        'hear "Stop". Then enter your heartbeat using keyboard.\n',...
+        'Please do not use any aids, such as the manual capture of the pulse.\n',...
+        'Please press any key to procede...'];
+    eng.end = ['Task finished. \n Please inform the researcher!'];
+    eng.fixation = ['+'];
+    eng.start = ['Start...'];
+    
+    % Set language.
+    switch lang
+        case 'eng'
+            HBTmsg = eng;
+        case 'deu'
+            HBTmsg = deu;
+    end
+    
     %% Trial design
     sFirst = {25,30,35,40,45,50};
     sSecond = {20,30,35,40,45,55};
